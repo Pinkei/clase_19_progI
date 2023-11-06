@@ -40,7 +40,7 @@ class Mascota:
     #PI = 3.14
     def __init__(self, nombre, edad, vacunado, sonido) :             
         self.nombre = nombre            #esto es la manera de crear esta variable
-        self.edad = edad
+        self.__edad = edad
         self.vacunado = vacunado
         self.sonido = sonido
         #self.PI = 3.14
@@ -51,15 +51,27 @@ class Mascota:
     def presentate(self):
         print(f"Soy una mascota. me llamo {self.nombre} y tengo {self.edad} años")
 
-
+    @property #asi le digo que eso es una propiedad, eso se lo llama decorador 
+    def edad(self):
+        return self.__edad
+    @edad.setter
+    def set_edad(self, value):
+        if value > 0:
+            self.__edad = value
+    
 #no es un metodo que querramos reutilizar, no tiene retorno 
 #juego de variables colgando del objeto mascota_1
 mascota_1 = Mascota("Bobby", 5, True, "Guaaaw")
 mascota_2 = Mascota("Ppuppy", 3, False, "Miauu")
+mascota_1.set_edad = -23
+
+print(mascota_1.edad)
+
 # print(mascota_1.nombre, mascota_1.edad, mascota_1.vacunado)
 # print(mascota_2.nombre, mascota_2.edad, mascota_2.vacunado)
 
-mascota_1.sonar()
+# mascota_1.sonar()
+# mascota_2.sonar()
 #print(Mascota.PI)
 
 mascota_1.presentate()
