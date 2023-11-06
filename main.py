@@ -65,7 +65,8 @@ with open(os.path.join(dir_actual, "personas2.csv"), "w") as file:
         data = ",".join(values)
         data = data.upper()
         file.write(data +"\n")
-        
+
+
 
 
 

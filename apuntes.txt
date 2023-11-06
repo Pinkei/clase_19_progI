@@ -1,0 +1,8 @@
+
+ #____________________________PROGRAMACION ORIENTADA A OBJETOS________________________
+        
+#la poo trata de simular la vida real, atrivutos es lo que queremos guardar
+#LOS OBJETOS SABEN HACER COSAS Y LO EXPONEN CON LOS METODOS, cuando definimos una funcion dentro de una clase se llama metodo
+#¿que es lo que sabe hacer esa clase?
+#dry = no te repitas, la reutilizacion de las funciones
+#las funciones no conserva el estado 
